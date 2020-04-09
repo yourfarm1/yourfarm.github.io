@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exotic Plan</title>
+
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="nav.css">
+  <link rel="stylesheet" type="text/css" href="Customize.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="exotic_plan.js"></script>
+  
+</head>
+<body>
+
+ <div class="top py-1">
+        <div class="container">
+           <div class="row">
+             <div class="col-md-4"><i class="fa fa-phone"></i><span>&nbspmobileNo.</span></div>
+             <div class="col-md-4"><i class="fa fa-envelope"></i><span>&nbspEmail</span></div>
+              <div class="col-md-4" align="text-right"><i class="fa fa-heart"></i><span>&nbspwhole day service</span></div>
+           </div>
+       </div>
+    </div>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="localhost\yourfarm\index.php"><h3><img src="image\logo.png" height="45px"> YourFarm</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+           Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+           <a href="index.php"  class="nav-link"><i class="fa fa-home"></i>&nbspHome</a>
+           
+           <a href="shop/all_cat.php" class="nav-link"><i class="fas fa-store"></i>FAQ</a> 
+          <a href="gallary.php" class="nav-link"><i class="fa fa-images"></i>About Us</a>
+           <a href="#footer" class="nav-link"><i class="fa fa-comments"></i>Login/Sign Up </a>
+           
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+   <div class="container-fluid">
+   	<div class="row custom_box">
+   		<div class="col-md-12 "> 		<h3 class="text-center">Customize Your Plan</h3> 
+         <hr>
+   		 </div>
+
+   		
+      
+   		<div class="col-md-6">
+   			 <h4 class="text-center">Choose Your Favourite Combo</h4>
+        <div class="row" >
+        	<ol id="selectable">
+            
+        	<div class="col-md-5 ui-widget-content    plan b1 btn" onmouseover="hover();" onmouseout="unhover();" onclick="deta();">  <img src="image/orange.png" class="img-fluid py-1 px-2" id="img_hov" >     
+                 <h5 class="text-center "id="title">Exotic Box 1</h5>                      
+        	 </div>
+        	<div class="col-md-5  ui-widget-content plan  text-center btn"  onmouseover="hover1();" onmouseout="unhover1();" onclick="deta();"  ><img src="image/veg1.png" class="img-fluid py-1 px-2" id="img_hov1"> 
+                <h5 class="text-center title">Exotic Box 2</h5>
+                 
+        	</div>
+        	<div class="col-md-5 ui-widget-content plan text-center btn" onmouseover="hover2();" onmouseout="unhover2();" onclick="deta();"><img src="image/veg2.png" class="img-fluid py-1 px-2" id="img_hov2">
+                  <h5 class="text-center title">Exotic Box 3</h5>               
+        	 </div>
+        	<div class="col-md-5  ui-widget-content plan text-center btn " onmouseover="hover3();" onmouseout="unhover3();" onclick="deta();"><img src="image/veg3clr.png" class="img-fluid py-1 px-2" id="img_hov3"> 
+                  <h5 class="text-center title">Exotic Box 4</h5>
+        	</div>
+        </ol>
+        </div>
+        
+
+   		</div>
+   		<div class="col-md-6">
+   			<h4 class="text-center">Select Your Subscription Plan</h4>
+              <form>
+              	<div class="col-md-12 ">
+              		<div class="row mt-5">
+              	  	<h5 class="col selcet_box_title">Your Selected Box </h5> <input type="text" name="selcet_box" id="selcet_input_box" value="" class="col" style="display: none;"  > <h5 id="selcet_box" class=" text-center text-success mr-5 pr-5"></h5>
+              	  </div>
+                   
+                   
+
+                    <div class="row mt-3">
+                      <h5 class="col price_title">Price</h5>
+                      <h6 class="col price text-center ml-5 pl-4">Rs.100/-</h6>
+                    </div>
+                        
+                    <div class="row mt-4">
+                      <h5 class="col delivery_title">Delivery Charge</h5>
+                      <h6 class="col delivery_charge text-success text-center ml-5 pl-5">FREE</h6>
+                    </div>
+
+                     <div class="row mt-4">
+                      <h5 class="col Subscription_plan">Your Subscription Plan</h5>
+                      <div class="subscription mr-5 pr-5">
+                        <select name="subscription">
+                          <option>Daily</option>
+                          <option>Weekly</option>
+                          <option>Monthly</option>
+
+                        </select>
+                      </div>
+                    </div>
+            
+                      <div class="row mt-4">
+                        <h5 class=" col quantity_title">Box Quantity</h5>
+                        <div class="col text-center ml-5 pl-5"><input type="text" name="qty" > </div>
+
+                      </div>
+                           <div class="row">
+                             <hr class="col text-success ">
+                           </div>
+                      <div class="row mt-4">
+                        <div class="col"></div>
+                        <button type="submit" class="col btn btn-success btn-lg">Get Your Box</button>
+                        <div class="col"></div>
+                      </div>
+
+              	</div>
+
+              </form>
+
+
+   		</div>
+   		
+   	</div>
+   </div>
+
+<div class="container">
+  <div class="row mt-5">
+    <h4 class="col-sm-12 text-center">FAQ About Exotic Box</h4>
+  </div>
+       <div class="row">
+    <div class="col">
+
+    <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <h5>What I Will Get in Box ?</h5></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body"> <ul>
+        <li><strong>Exotic Box 1</strong> 
+          <span>  This box  contain product1 , product2 ,product3 ,product4.     </span>
+        </li>
+
+        <li><strong>Exotic Box 2</strong>
+          <span>  This box  contain product1 , product2 ,product3 ,product4.     </span>
+        </li>
+
+        <li><strong>Exotic Box 3</strong>
+          <span>  This box  contain product1 , product2 ,product3 ,product4.     </span>
+        </li>
+
+        <li><strong>Exotic Box 4</strong>
+          <span>  This box  contain product1 , product2 ,product3 ,product4.     </span>
+        </li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <h5>What is the quantity of each products?</h5></a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+        <ul>
+              <li><strong>Exotic Box 1</strong> 
+          <span>  This box contain 200g of each product.     </span>
+        </li>
+
+        <li><strong>Exotic Box 2</strong>
+          <span>   This box contain 250g of each product.    </span>
+        </li>
+
+        <li><strong>Exotic Box 3</strong>
+          <span>   This box contain 300g of each product.    </span>
+        </li>
+
+        <li><strong>Exotic Box 4</strong>
+          <span>   This box contain 400g of each product.     </span>
+        </li>
+
+            </ul>
+        
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        <h5>Will I be locked into a contract?</h5></a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body"><h6>No, you can cancel your plan at any time. Just make sure you do so before your weekly cutoff to stop your next order. It’s that simple.</h6></div>
+    </div>
+  </div>
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        <h5>Can I skip a week of delivery?</h5></a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body"><h6>     Definitely. Just make sure you do it before your delivery cutoff time to stop your next order.</h6></div>
+    </div>
+  </div>
+  
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        <h5>Is it completely organic ?</h5></a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body"><h6> Yes, The product deliver to you is completely organic and fresh.</h6></div>
+    </div>
+  </div>
+
+</div>
+
+
+    </div>
+
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Go more Question ? Contact Us</button>
+  <div id="demo" class=" col-md-12 collapse">
+   <form class="form-horizontal" action="/action_page.php">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Name</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Mobile:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter Mobile Number">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="pwd" placeholder="Enter Email">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Your Question</label>
+    <div class="col-sm-10">
+      <textarea class="col-md-12"></textarea>
+    </div>
+  </div>
+   <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
+    </div>
+  </div>
+</form>
+</div>  
+</div>
+</div>
+
+</div>
+  
+
+
+
+<script type="text/javascript">
+
+  
+
+ 
+
+
+  var imgHov=document.getElementById("img_hov");
+  var imgHov1=document.getElementById("img_hov1");
+  var imgHov2=document.getElementById("img_hov2");
+  var imgHov3=document.getElementById("img_hov3");
+
+  function hover() {
+                         
+     imgHov.setAttribute('src', 'image/orangeclr.png');
+
+}
+
+
+function unhover() {
+  imgHov.setAttribute('src', 'image/orange.png');
+}
+//************
+
+
+  function hover1() {
+                         
+     imgHov1.setAttribute('src', 'image/veg1clr.png');
+
+}
+
+
+function unhover1() {
+  imgHov1.setAttribute('src', 'image/veg1.png');
+}
+
+//******
+function hover2() {
+                         
+     imgHov2.setAttribute('src', 'image/veg2clr.png');
+
+}
+
+
+function unhover2() {
+  imgHov2.setAttribute('src', 'image/veg2.png');
+}
+
+
+  function hover3() {
+                         
+     imgHov3.setAttribute('src', 'image/veg3.png');
+
+}
+
+
+function unhover3() {
+  imgHov3.setAttribute('src', 'image/veg3clr.png');
+}
+
+
+function oc1()
+{
+   
+   document.getElementById("selcet_box").innerHTML= document.getElementByClass("title").value;
+
+}
+
+$( function() {
+    $( "#selectable" ).selectable( { 
+     selected:function() {}
+     
+     
+    } );
+  } );
+
+$( "#selectable" ).on( "selectableselected", function( event, ui ) {
+   $(ui.selected).css("color", "green");
+   var x=$(ui.selected).text(); 
+   
+   $("#selcet_box").html(x);
+    $("#selcet__input_box").val(x);
+ 
+
+ 
+
+} );
+
+
+
+
+ 
+</script>
+
+
+
+</body>
+</html>
+
+

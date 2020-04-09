@@ -1,0 +1,41 @@
+body{
+
+	
+	background-color: lightblue;
+	background-attachment: fixed;
+	background-size:cover;
+}
+div button {
+    opacity: 0.8;
+	margin-top: 10px;
+	float: right;
+  background-color: darkgreen;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+{
+	color:black;
+}
+label{
+
+      font-size: 20px;
+	  font-weight: bold;
+  color:green;
+}
+section{
+	margin-top: 40px;
+}
+
+.navbar{
+	opacity: 0.8;
+}
+.box
+{
+  background: url(profile.svg) !important;
+  
+}
